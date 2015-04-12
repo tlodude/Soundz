@@ -14,11 +14,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     @IBAction func loginWithTwitterTapped(sender: AnyObject) {
+        PFTwitterUtils.initializeWithConsumerKey("X1MdESo8vHvBCLUWS3JTKp4UZ", consumerSecret: "1bWFAvZ3ZISUxicvoncqq1WWPtGlTTw72c6XzFNGP209ujtceT")
+        
+        PFTwitterUtils.logInWithBlock { (user: PFUser?, error: NSError?) -> Void in
+            if user == nil {
+                println(error)
+            } else {
+                println("we did it")
+            }
+        }
     }
 }
 
