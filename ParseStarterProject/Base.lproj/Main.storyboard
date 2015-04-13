@@ -35,9 +35,54 @@
                             <constraint firstAttribute="trailingMargin" secondItem="sZp-Co-5hf" secondAttribute="trailing" constant="20" id="yWp-Ji-8fo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Dtl-1s-IhT" kind="presentation" identifier="moveToSoundsSegue" id="0VY-Oz-ctn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="495" y="337"/>
+        </scene>
+        <!--List Soundz View Controller-->
+        <scene sceneID="dfA-bn-5M7">
+            <objects>
+                <viewController id="Dtl-1s-IhT" customClass="ListSoundzViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mA7-jC-Zuf"/>
+                        <viewControllerLayoutGuide type="bottom" id="NlY-Im-E51"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cw7-6I-yma">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khL-nn-rqh">
+                                <rect key="frame" x="0.0" y="7" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="nIh-jV-aLH"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="ni4-6K-EfK">
+                                        <barButtonItem key="leftBarButtonItem" title="logout" id="W8i-3n-TOb">
+                                            <connections>
+                                                <action selector="logoutTapped:" destination="Dtl-1s-IhT" id="tT5-Yr-zcL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="record" id="XDa-V7-eta"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="khL-nn-rqh" secondAttribute="trailing" id="890-DI-79n"/>
+                            <constraint firstItem="khL-nn-rqh" firstAttribute="top" secondItem="Cw7-6I-yma" secondAttribute="top" constant="7" id="jsQ-AF-sDo"/>
+                            <constraint firstItem="khL-nn-rqh" firstAttribute="leading" secondItem="Cw7-6I-yma" secondAttribute="leading" id="kvt-1P-a0K"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfS-2O-zNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="337"/>
         </scene>
     </scenes>
 </document>

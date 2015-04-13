@@ -22,6 +22,8 @@ class ViewController: UIViewController {
                 println(error)
             } else {
                 println("we did it")
+                
+                self.performSegueWithIdentifier("moveToSoundsSegue", sender: self)
             }
         }
     }
